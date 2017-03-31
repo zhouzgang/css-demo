@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态伪类选择器</title>
+</head>
+<style>
+    .download-info {
+        text-align: center;
+    }
+    .btn {
+        background-color: #0074cc;
+        *background-color: #0055cc;
+        background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                                        from(#0088cc), to(#0055cc));
+        background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
+        background-image: -o-linear-gradient(top, #0088cc, #0055cc);
+        background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
+        background-image: linear-gradient(top, #0088cc, #0055cc);
+        background-repeat: repeat-x;
+        *display: inline;
+        border: 1px solid #cccccc;
+        *border: 0px;
+        border-color: #cccccc;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25) ;
+        border-radius: 6px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: normal;
+        filter: progid: dximagetransform.microsoft.gradient(enabled=false);
+        line-height: normal;
+        padding: 14px 24px;
+        text-align: center;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        text-decoration: none;
+        vertical-align: middle;
+        *zoom: 1;
+    }
+
+    .btn:hover {
+        background-position: 0 -15px;
+        background-color: #0055cc;
+        *background-color: #004ab3;
+        color: #ffffff;
+        text-decoration: none;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+
+        -webkit-transition: background-position 0.1s linear;
+        -moz-transition: background-position 0.1s linear;
+        -ms-transition: background-position 0.1s linear;
+        -o-transition: background-position 0.1s linear;
+        transition: background-position 0.1s linear;
+    }
+    .btn:active {
+        background-color: #0055cc;
+        *background-color: #004ab3;
+        background-color: #004099 \9;
+        background-image: none;
+        outline: 0;
+
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25)
+                        , 0 1px 2px rgba(0, 0, 0, 0.05);
+        color:  rgba(255, 255, 255, 0.75);
+    }
+
+    .btn:focus {
+        outline: thin dotted #333;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+</style>
+<body>
+    <div class="download-info">
+        <a href="#" class="btn">View project on Github</a>
+    </div>
+
+
+    <ul>6种伪类选择器
+        <li>动态伪类***</li>
+        <li>目标伪类***</li>
+        <li>语言伪类***</li>
+        <li>UI状态伪类***</li>
+        <li>结构伪类***</li>
+        <li>否定伪类***</li>
+    </ul>
+</body>
+</html>

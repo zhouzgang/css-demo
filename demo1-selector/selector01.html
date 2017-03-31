@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器demo</title>
+</head>
+<style>
+    * {     /*元素默认都会有间距，清除间距*/
+        margin: 0px;    /*内间距*/
+        padding: 0px    /*外间距*/
+    }
+    .clearfix:after, .clearfix:before {     /*伪类选择器*/
+        display: table;
+        content: "";
+    }
+    .clearfix:after {
+        clear: both;
+        overflow: hidden;
+    }
+    .demo {
+        width: 250px;
+        border: 1px solid #cccccc;
+        padding: 10px;
+        margin: 20px auto;
+    }
+    li {
+        list-style: none outside none;
+        float: left;
+        height: 20px;
+        line-height: 20px;
+        width: 20px;
+        border-radius: 10px;
+        text-align: center;
+        background: #f36;
+        color: green;
+        margin-right: 5px;
+    }
+    .demo * {   /*层次下面的所有元素都会被选中*/
+        background: #657c80;
+    }
+    ul {
+        background: grey;
+    }
+    #first {
+        background: lime;
+        color: #000;
+    }
+    #last {     /*id全局只能有一个*/
+        background: #000000;
+        color: lime;
+    }
+    .item {
+        background: green;
+        color: #fff;
+        font-weight: bold;
+    }
+    .item.improtant {   /*必须同时满足*/
+        background: red;
+    }
+</style>
+<body>
+    <ul class="clearfix demo">
+        <li class="first" id="first">1</li>
+        <li>2</li>
+        <li class="item improtant">3</li>
+        <li class="improtant">4</li>
+        <li class="item">5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li class="last" id="last">9</li>
+    </ul>
+</body>
+</html>
