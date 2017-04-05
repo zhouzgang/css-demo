@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+</head>
+
+<style>
+    #wrapper {
+        display: table;
+        border: 1px solid #ff2d21;
+        height: 300px;
+    }
+    #cell , #cell1 {
+        display: table-cell;
+        vertical-align: middle;
+        border: 1px solid #38ff45;
+        height: 200px;
+    }
+
+    .content1 {
+        border: 1px solid #1312ff;
+        position: absolute;
+        top: 50%;
+        height: 240px;
+        margin-top: -120px;
+    }
+
+    #floater {
+        border: 1px solid #51ff13;
+        float: left;
+        height: 50%;
+        margin-bottom: -120px;
+    }
+    #content2 {
+        border: 1px solid #ff144a;
+        clear: both;
+        height: 240px;
+        position: relative;
+    }
+
+    #content3 {
+        border: 1px solid #51ff13;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 240px;
+        width: 70%;
+    }
+
+</style>
+
+<body>
+
+    <!--<div id="wrapper">-->
+        <!--<div id="cell">-->
+            <!--<div class="content">content goes here</div>-->
+        <!--</div>-->
+        <!--<div id="cell1">-->
+            <!--<div class="content">content goes here</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="content1">-->
+        <!--Content goes here-->
+    <!--</div>-->
+
+    <!--<div id="floater">-->
+        <!--<div id="content2">Content here</div>-->
+    <!--</div>-->
+
+    <div id="content3">Content here</div>
+
+</body>
+</html>
